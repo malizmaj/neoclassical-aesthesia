@@ -1,0 +1,27 @@
+{
+  "name": "neoclassical-aesthesia",
+  "version": "0.0.1",
+  "author": "Aleksandar Olic <aleksandar.olic.89@gmail.com>",
+  "homepage": "localhost",
+  "description": "Bower component for WP site.",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "bootstrap",
+    "WordPress"
+  ],
+  "license": "GNU",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizer": "~2.8.2",
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.1"
+  }
+}

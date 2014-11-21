@@ -1,0 +1,32 @@
+{
+  "name": "neoclassical-aesthesia",
+  "version": "0.0.1",
+  "author": "Aleksandar Olic <aleksandar.olic.89@gmail.com>",
+  "homepage": "localhost",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malizmaj/neoclassical-aesthesia.git"
+  },
+  },
+  "licenses": [
+    {
+      "type": "GNU",
+      "url": "http://www.gnu.org/licenses/gpl-2.0.html"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-wp-version": "~0.1.0",
+    "grunt-grunticon": "^1.2.9",
+    "grunt-svgstore": "^0.3.6",
+    "grunt-wp-assets": "^0.2.6"
+  }
+}
