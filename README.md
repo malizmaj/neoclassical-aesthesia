@@ -1,5 +1,5 @@
 
-Theme development using udnerscores with neoclassical design orientation
+Theme development using underscores with neoclassical design orientation
 
 
 * A sample custom header implementation in `inc/custom-header.php` that can be activated by uncommenting one line in `functions.php` and adding the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
