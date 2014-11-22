@@ -97,6 +97,13 @@ function neoclassical_aesthesia_scripts() {
 	wp_enqueue_script( 'neoclassical-aesthesia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'neoclassical-aesthesia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	/**
+	 * Live reload function.
+	 */
+	if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+	  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+	  wp_enqueue_script('livereload');
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -107,7 +114,7 @@ add_action( 'wp_enqueue_scripts', 'neoclassical_aesthesia_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -128,8 +135,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-  wp_enqueue_script('livereload');
-}

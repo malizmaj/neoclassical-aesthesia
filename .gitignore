@@ -20,5 +20,6 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # Ignore these so they're not stored in source control
-
+npm-debug.log
+node_modules
 StudyInDesign
