@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     // Livereload is setup for the 35729 port by default
     watch: {
       sass: {
-        files: ['sass/**/*.sass'],
+        files: '**/*.scss',
         tasks: ['sass:dev'],
         options: {
           livereload: 35729
@@ -20,29 +20,18 @@ module.exports = function(grunt) {
       }
     },
 
-    // Sass object
-    sass: {
-      dev: {
-        files: [
-          {
-            src: ['**/*.sass', '!**/_*.sass'],
-            cwd: 'sass',
-            dest: 'css',
-            ext: '.css',
-            expand: true
-          }
-        ],
-        options: {
-          style: 'expanded',
-          compass: true
+ sass: {
+        dev: {
+            files: {
+                // destination         // source file
+                "style.css" : "sass/style.scss"
+            }
         }
-      }
     }
-
   });
 
   // Default task
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['sass', 'watch']);
 
   // Load up tasks
   grunt.loadNpmTasks('grunt-contrib-sass');
